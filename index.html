@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Events Example</title>
+    <script type="text/javascript" src="js/global.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- El contingut del header -->
+      <header onclick="changeContent('html-includes/section.html','content-variable')" w3-include-html="html-includes/header.html"></header>
+
+      <!-- Separador -->
+      <hr />
+
+      <!-- El menú lateral -->
+      <aside w3-include-html="html-includes/aside.html"></aside>
+
+      <!-- Una pàgina on el contingut és totalment variable. -->
+      <section id="content-variable" w3-include-html="html-includes/section.html"></section>
+
+      <!-- Obliguem a que pari de floatar -->
+      <div class="stop-floating"></div>
+
+      <!-- El contingut del footer -->
+      <footer w3-include-html="html-includes/footer.html"></footer>
+
+    </div>
+    
+    <!-- Obligo a la pàgina que carregui tot el contingut dels elements que tenen w3-include-html com atribut -->
+    <script type="text/javascript">
+      includeHTML();
+    </script>
+
+  </body>
+</html>
